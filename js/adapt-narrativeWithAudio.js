@@ -47,6 +47,7 @@ define(function(require) {
                 this.$('.narrativeWithAudio-content').addClass('addPopUp').removeClass('removePopUp');
                 this.$('.narrativeWithAudio-content').css({'display':'none'});
                 this.$('.narrativeWithAudio-popup-done').css({'display':'block'});
+                this.$('.popup-shadow').fadeOut('fast');
             }
         },
 
