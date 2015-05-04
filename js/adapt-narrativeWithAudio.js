@@ -297,7 +297,7 @@ define(function(require) {
             this.$('.narrativeWithAudio-popup-sound').removeClass('icon-sound-mute');
 
             if (!this.model.get('_isDesktop')) {
-                _.debounce(this.resizePopup(false), 100);
+                _.debounce(this.resizePopup(true), 100);
             }
 
         },
@@ -330,7 +330,7 @@ define(function(require) {
             }
             this.$('.narrativeWithAudio-popup-sound').removeClass('icon-sound-mute');
             if (!this.model.get('_isDesktop')) {
-                _.debounce(this.resizePopup(false), 100);
+                _.debounce(this.resizePopup(true), 100);
             }
         },
 
