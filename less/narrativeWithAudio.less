@@ -67,12 +67,12 @@
         padding:20px;
 
     }
-     .narrativeWithAudio-content-title-inner{
-    padding:  10px 10px 0px 0px;
-  }
-  .narrativeWithAudio-content-body-inner{
-    padding:  10px 10px 0px 0px;
-  }
+    .narrativeWithAudio-content-title-inner{
+        padding:  10px 10px 0px 0px;
+    }
+    .narrativeWithAudio-content-body-inner{
+        padding:  10px 10px 0px 0px;
+    }
 
 
     .narrativeWithAudio-content-title{
@@ -198,22 +198,22 @@
             padding: 10px;
             color: @button-text-color;
         }
-        &:hover {
-            background-color: @button-hover-color;
-            color: @button-text-hover-color;
-            .icon {
-                color: @button-text-hover-color;
-            }
+        /*&:hover {
+        background-color: @button-hover-color;
+        color: @button-text-hover-color;
+        .icon {
+        color: @button-text-hover-color;
+    }
 
-        }
+    }
         &:focus .focus-rect {
-            position: absolute;
-            outline: @focus-outline;
-            right: extract(@focus-outline, 1);
-            bottom: extract(@focus-outline, 1);
-            top: extract(@focus-outline, 1);
-            left: extract(@focus-outline, 1);
-        }
+        position: absolute;
+        outline: @focus-outline;
+        right: extract(@focus-outline, 1);
+        bottom: extract(@focus-outline, 1);
+        top: extract(@focus-outline, 1);
+        left: extract(@focus-outline, 1);
+    }*/
     }
 
     .narrativeWithAudio-strapline-title-inner {
@@ -262,7 +262,7 @@
     }
 
     .narrativeWithAudio-item-graphic-inner{
-              padding: 15px 0px 0px 0px;
+        padding: 15px 0px 0px 0px;
         .dir-rtl & {
             padding-left: inherit;
             padding-right: @item-padding-left;
@@ -374,6 +374,25 @@
         .narrativeWithAudio-graphic-pin-icon {
             &:hover {
                 color: @item-hover-color;
+            }
+        }
+        .narrativeWithAudio-strapline-title {
+            &:hover {
+                background-color: @button-hover-color;
+                color: @button-text-hover-color;
+                .icon {
+                    color: @button-text-hover-color;
+                }
+
+            }
+
+            &:focus .focus-rect {
+                position: absolute;
+                outline: @focus-outline;
+                right: extract(@focus-outline, 1);
+                bottom: extract(@focus-outline, 1);
+                top: extract(@focus-outline, 1);
+                left: extract(@focus-outline, 1);
             }
         }
         .narrativeWithAudio-popup-close {
