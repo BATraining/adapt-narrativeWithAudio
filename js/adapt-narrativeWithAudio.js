@@ -472,6 +472,10 @@ define(function(require) {
             }, this));
 
             var currentStage = this.model.get('_stage');
+
+            var currentItem = this.getCurrentItem(currentStage);
+            currentItem.visited = true;
+
             var $activeItem = this.$('.narrativeWithAudio-content-item').eq(currentStage);
             var $currentPages = $activeItem.find('.narrativeWithAudio-page');
             var $currentActivePage = $activeItem.find('.narrativeWithAudio-page').eq(0);
@@ -494,14 +498,11 @@ define(function(require) {
 
             this.$('.narrativeWithAudio-popup-sound').removeClass('icon-sound-mute');
 
-
-
             this.$('.narrativeWithAudio-content').css({'display':'block'});
             this.$('.narrativeWithAudio-content').addClass('addPopUp').removeClass('removePopUp');
             _.debounce(this.resizePopup(false), 100);
 
         },
-
 
         closePopup: function(event) {
             event.preventDefault();
