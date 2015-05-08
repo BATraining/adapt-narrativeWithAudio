@@ -1,0 +1,15 @@
+{
+  "name": "adapt-narrativeWithAudio",
+  "version": "1.0.0",
+  "description": "A narrative component",
+  "main": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/BATraining/adapt-narrativeWithAudio.git"
+  },
+  "author": "AdaptLearning",
+  "license": "GPL v3",
+  "bugs": {
+    "url": "https://github.com/BATraining/adapt-narrativeWithAudio/issues"
+  }
+}

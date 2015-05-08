@@ -1,0 +1,118 @@
+{{! Maintainers - Brian Quinn, Shahfaisal Patel <shahfaisal.patel@exultcorp.com>}}
+<div class="narrativeWithAudio-inner component-inner" role="region" aria-label="{{_globals._components._narrativeWithAudio.ariaRegion}}">
+    {{> component this}}
+    <div class="narrativeWithAudio-widget component-widget">
+
+        <div class="narrativeWithAudio-content">
+            <div class="narrativeWithAudio-content-inner">
+                <div class="narrativeWithAudio-popup-nav component-item-color">
+                    <a href="#" class="narrativeWithAudio-popup-controls back" aria-label="{{_globals._accessibility._ariaLabels.previous}}" role="button">
+                        <div class="narrativeWithAudio-popup-arrow-l component-item-text-color icon icon-controls-small-left"></div>
+                    </a>
+                    <div class="narrativeWithAudio-popup-count component-item-text-color">
+                        <span class="current">1</span>/<span class="total">3</span>
+                    </div>
+                    <a href="#" class="narrativeWithAudio-popup-controls next" aria-label="{{_globals._accessibility._ariaLabels.next}}" role="button">
+                        <div class="narrativeWithAudio-popup-arrow-r component-item-text-color icon icon-controls-small-right"></div>
+                    </a>
+
+                    <a href="#" class="narrativeWithAudio-popup-audio">
+                        <div class="narrativeWithAudio-popup-sound component-item-text-color icon icon-sound"></div>
+                    </a>
+                    <a href="#" class="narrativeWithAudio-popup-done" aria-label="{{_globals._accessibility._ariaLabels.closePopup}}" role="button">
+                        <div class="narrativeWithAudio-popup-close component-item-text-color icon icon-cross"></div>
+                    </a>
+
+                </div>
+
+                {{#each _items}}
+                <div class="narrativeWithAudio-content-item">
+                    <div class="narrativeWithAudio-content-title">
+                        <div class="narrativeWithAudio-content-title-inner accessible-text-block " role="heading" aria-level="5" tabindex="0">
+                            {{{title}}}
+                        </div>
+                    </div>
+                    {{#each _page}}
+                    <div class="narrativeWithAudio-page page-{{@index}}">
+                        <div class="narrativeWithAudio-content-body">
+                            <div class="narrativeWithAudio-content-body-inner">
+                                <div class="">
+                                    {{{title}}}
+                                </div>
+                                <p>
+                                    {{{a11y_text body}}}
+                                </p>
+                            </div>
+                        </div>
+                        {{#if _graphic}}
+                        <div class="narrativeWithAudio-item-graphic">
+                            <div class="narrativeWithAudio-item-graphic-inner">
+                                <img src="{{_graphic.src}}" alt="{{_graphic.alt}}"/>
+                            </div>
+                        </div>
+                        {{/if}}
+                    </div>
+                    {{/each}}
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+        <div class="narrativeWithAudio-strapline">
+            <div class="narrativeWithAudio-strapline-header">
+                <div class="narrativeWithAudio-strapline-header-inner clearfix">
+                    <div></div>
+                    {{#each _items}}
+                    <a href="#" role="button" class="narrativeWithAudio-strapline-title" aria-label="{{{strapline}}}">
+                        <div class="narrativeWithAudio-strapline-title-inner accessible-text-block h5">
+                            {{{strapline}}}
+                        </div>
+                        <div class="icon icon-plus"></div>
+                        <div class="focus-rect"></div>
+                    </a>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+
+        <div class="narrativeWithAudio-slide-container">
+
+            <a href="#" class="narrativeWithAudio-controls narrativeWithAudio-control-left" role="button" aria-label="{{_globals._accessibility._ariaLabels.previous}}">
+                <div class="icon icon-controls-left"></div>
+            </a>
+            <a href="#" class="narrativeWithAudio-controls narrativeWithAudio-control-right" role="button" aria-label="{{_globals._accessibility._ariaLabels.next}}">
+                <div class="icon icon-controls-right"></div>
+            </a>
+
+            <div class="narrativeWithAudio-slider clearfix">
+                {{#each _items}}
+                <div class="narrativeWithAudio-slider-graphic {{#if visited}}visited{{/if}}">
+                    <img src="{{_narrativegraphic.src}}" alt="{{_narrativegraphic.alt}}"/>
+
+                    {{#each _page}}
+                    {{#if audioSrc}}
+                    <div class="hotgraphicWithAudio-item-audio">
+                        <audio preload="none">
+                            {{#each audioTypes}}
+                            <source src="{{../audioSrc}}.{{type}}" type="{{codec}}">
+                            {{/each}}
+                        </audio>
+                    </div>
+                    {{/if}}
+                    {{/each}}
+                </div>
+
+                {{/each}}
+            </div>
+            <div class="narrativeWithAudio-indicators">
+                {{#each _items}}
+                <div class="narrativeWithAudio-progress component-item-color component-item-border"></div>
+                {{/each}}
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+    </div>
+</div>
+<div class="popup-shadow"></div>
